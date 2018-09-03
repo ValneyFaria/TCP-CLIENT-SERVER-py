@@ -8,7 +8,7 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # connect the client
 # client.connect((target, port))
-client.connect(('172.18.3.111', 9007))
+client.connect(('172.18.3.111', 9010))
 
 # send some data (in this case a HTTP GET request)
 #client.send('GET /index.html HTTP/1.1\r\nHost: {}.{}\r\n\r\n'.format(sld, tld))
@@ -16,4 +16,4 @@ client.connect(('172.18.3.111', 9007))
 # receive the response data (4096 is recommended buffer size)
 response = client.recv(4096)
 
-print type(response)
+print response
